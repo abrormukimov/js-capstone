@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(28, 20, 16);
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
