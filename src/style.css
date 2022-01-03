@@ -31,3 +31,17 @@
   align-items: center;
   justify-content: center;
 }
+button {
+  padding: 5px 10px;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.section1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 100px;
+  width: 1000px;
+  margin: 20px auto;
+}
