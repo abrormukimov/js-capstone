@@ -1,16 +1,16 @@
-import getMovies from './api.js';
+import { getMovies, postComments } from './api.js';
 import './style.css';
 
 const section1 = document.querySelector('.section1');
+const commentSubmit = document.querySelector('.add-comment-form');
 
 document.addEventListener('DOMContentLoaded', () => {
-  // e.preventDefault();
   getMovies().then((res) => {
     res.forEach((element) => {
       const card = document.createElement('div');
       card.classList.add('cards');
 
-      const image = document.createElement('img')
+      const image = document.createElement('img');
       image.classList.add('homepage-image');
       image.src = element.image.medium;
 
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       commentButton.type = 'button';
       commentButton.id = 'comment';
       commentButton.textContent = 'Comment';
+      commentButton.setAttribute('data-key', `${element.id}`);
 
       const reserveButton = document.createElement('button');
       reserveButton.type = 'button';
@@ -46,4 +47,41 @@ document.addEventListener('DOMContentLoaded', () => {
       section1.appendChild(card);
     });
   });
+});
+
+section1.addEventListener('click', (e) => {
+  if (e.target.id === 'comment') {
+    const commentsMenu = document.querySelector('.comments-menu');
+    commentsMenu.classList.add('comments-menu-poppedup');
+    const image = document.querySelector('.movie-img');
+    const movieTitle = document.querySelector('.movie-title');
+    const rating = document.querySelector('.rating');
+    const runtime = document.querySelector('.runtime');
+    const premiered = document.querySelector('.premiered');
+    const genres = document.querySelector('.genres');
+    getMovies().then((res) => {
+      res.forEach((mov) => {
+        // console.log(mov.id);
+        const datakey = parseInt(e.target.dataset.key, 10);
+        if (mov.id === datakey) {
+          image.src = mov.image.medium;
+          movieTitle.textContent = mov.name;
+          rating.textContent = `Rating: ${mov.rating.average}`;
+          runtime.textContent = `Runtime: ${mov.runtime} minutes`;
+          premiered.textContent = `Premiered on ${mov.premiered}`;
+          genres.textContent = `Genres: ${mov.genres.join(', ')}`;
+        }
+      });
+    });
+
+    commentSubmit.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = document.querySelector('.commenter-name').value;
+      const insight = document.querySelector('.commenter-insight').value;
+      const allComms = document.querySelector('.all-comments');
+      const p = document.createElement('p');
+      p.textContent = `${user.toLowerCase()}: ${insight}`;
+      allComms.appendChild(p);
+    });
+  }
 });
