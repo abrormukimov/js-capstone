@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .navbar {
@@ -19,4 +19,15 @@
   height: 40px;
   margin-left: 60px;
   margin-right: 60px;
+}
+.my-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(28, 20, 16);
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
