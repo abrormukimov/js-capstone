@@ -1,5 +1,6 @@
 const url = 'https://api.tvmaze.com/shows';
 const key = 'CGPm9CVfAjvE2W0viDdC';
+const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 
 const getMovies = async () => {
   const response = await fetch(url);
@@ -7,7 +8,7 @@ const getMovies = async () => {
 };
 
 const postComments = async (itemId, username, comment) => {
-  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${key}/comments`,
+  const response = await fetch(`${baseUrl}apps/${key}/comments`,
     {
       method: 'POST',
       headers: {
@@ -23,7 +24,13 @@ const postComments = async (itemId, username, comment) => {
   return response.json();
 };
 
+const getComments = async (itemid) => {
+  const response = fetch(`${baseUrl}apps/${key}/comments?item_id=${itemid}`);
+  return response.json();
+};
+
 export {
   getMovies,
   postComments,
+  getComments,
 };
