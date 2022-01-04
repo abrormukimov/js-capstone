@@ -44,11 +44,10 @@ const getComments = async (itemid) => {
   const response = await fetch(`${baseUrl}${key}/comments?item_id=${itemid}`);
   return response.json();
 };
-const getRes = async (itemid) => {
-  const response = await fetch(
-    `${baseUrl}${key}/reservations?item_id=${itemid}`
-  );
+
+const getReservation = async (itemid) => {
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/CGPm9CVfAjvE2W0viDdC/reservations?item_id=${itemid}`);
   return response.json();
 };
 
-export { getMovies, postComments, getComments, getRes, postReservations };
+export { getMovies, postComments, getComments, getReservation, postReservations };

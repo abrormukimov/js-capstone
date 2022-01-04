@@ -67,6 +67,21 @@ button {
   overflow-y: scroll;
 }
 
+.fa-times {
+  position: absolute;
+  top: 2%;
+  right: 1.5%;
+  font-size: 40px;
+}
+
+.movie-img {
+}
+
+.reservation-menu {
+  display: none;
+  position: relative;
+}
+
 .reserve-menu-poppedup {
   display: block;
   background: rgba(0, 0, 0, 0.6);
@@ -81,18 +96,4 @@ button {
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
-}
-
-.fa-times {
-  position: absolute;
-  top: 2%;
-  right: 1.5%;
-  font-size: 40px;
-}
-
-.movie-img {
-}
-
-.reservation-menu {
-  display: none;
 }

@@ -3,7 +3,8 @@ import {
   getMovies,
   postComments,
   postReservations,
-  getRes,
+  getReservation
+  ,
 } from "./api.js";
 import { display, displayRes } from "./comments.js";
 import "./style.css";
@@ -95,21 +96,26 @@ section1.addEventListener("click", async (e) => {
       await display(allComms, dataKey);
     });
   }
+  console.log(e.target.id);
+  
+});
+section1.addEventListener('click', async(e)=>{
   if (e.target.id === "reserve") {
     const dataKey = e.target.dataset.key;
-    await displayRes(allRes, dataKey);
+    // await displayRes(allRes, dataKey);
     console.log(dataKey);
     const reservationMenu = document.querySelector(".reservation-menu");
     reservationMenu.classList.add("reserve-menu-poppedup");
-    const image = document.querySelector(".movie-img");
-    const movieTitle = document.querySelector(".movie-title");
-    const rating = document.querySelector(".rating");
-    const runtime = document.querySelector(".runtime");
-    const premiered = document.querySelector(".premiered");
-    const genres = document.querySelector(".genres");
+    const image = document.querySelector(".movie-image");
+    const movieTitle = document.querySelector(".movie-name");
+    const rating = document.querySelector(".des-rating");
+    const runtime = document.querySelector(".des-runtime");
+    const premiered = document.querySelector(".des-premiered");
+    const genres = document.querySelector(".des-genres");
     getMovies().then((res) => {
       res.forEach((mov) => {
         const datakey = parseInt(e.target.dataset.key, 10);
+        console.log(datakey);
         if (mov.id === datakey) {
           image.src = mov.image.medium;
           movieTitle.textContent = mov.name;
@@ -129,4 +135,4 @@ section1.addEventListener("click", async (e) => {
       await display(allRes, dataKey);
     });
   }
-});
+})
