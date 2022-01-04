@@ -1,25 +1,32 @@
-import { getComments, getReservation } from "./api.js";
+import { getComments, getLikes, getReservation } from './api.js';
 
 const display = async (commentsSection, id) => {
-  commentsSection.innerHTML = "";
+  commentsSection.innerHTML = '';
   const data = await getComments(id);
   let listItems = '';
   data.forEach((item) => {
     listItems += `<p>${item.username}: ${item.comment}</p>`;
-   
   });
   commentsSection.innerHTML = listItems;
 };
 
 const displayRes = async (reserveSection, id) => {
-  reserveSection.innerHTML = "";
+  reserveSection.innerHTML = '';
   const dat = await getReservation(id);
-  console.log(dat);
   let listItems = '';
   dat.forEach((item) => {
-    listItems += `<p>${item.username}: ${item.start_date}</p>`;
+    listItems += `<p>${item.username}: Startdate: ${item.date_start} - Enddate: ${item.date_end}</p>`;
   });
-  commentsSection.innerHTML = listItems;
+  reserveSection.innerHTML = listItems;
 };
 
-export { display, displayRes };
+const displayLikes = async (like, id) => {
+  const data = await getLikes();
+  data.forEach((item) => {
+    if (id === item.item_id) {
+      like.innerHTML = `<p>${item.likes} likes</p>`;
+    }
+  });
+};
+
+export { display, displayRes, displayLikes };
