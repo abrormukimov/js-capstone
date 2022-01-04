@@ -1,18 +1,10 @@
 import { getComments, getMovies, postComments } from './api.js';
+import { display } from './comments.js';
 import './style.css';
 
 const section1 = document.querySelector('.section1');
 const commentSubmit = document.querySelector('.add-comment-form');
-
-const display = async (commentsSection) => {
-  commentsSection.innerHTML = '';
-  const data = await getComments();
-  const myList = data.map((item) => {
-    const listItems = `<p>${item.username}: ${item.comment}</p>`;
-    return listItems;
-  });
-  commentsSection.innerHTML = myList.join('');
-};
+const allComms = document.querySelector('.all-comments');
 
 document.addEventListener('DOMContentLoaded', () => {
   getMovies().then((res) => {
@@ -61,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 section1.addEventListener('click', (e) => {
   if (e.target.id === 'comment') {
+    const dataKey = e.target.dataset.key;
+    display(allComms, dataKey);
     const commentsMenu = document.querySelector('.comments-menu');
     commentsMenu.classList.add('comments-menu-poppedup');
     const image = document.querySelector('.movie-img');
@@ -87,13 +81,8 @@ section1.addEventListener('click', (e) => {
       e.preventDefault();
       const user = document.querySelector('.commenter-name').value;
       const insight = document.querySelector('.commenter-insight').value;
-      const allComms = document.querySelector('.all-comments');
-      // const p = document.createElement('p');
-      // await postComments(1, user, insight);
-      // await display(allComms);
-      // p.textContent = `${user.toLowerCase()}: ${insight}`;
-      // allComms.appendChild(p);
+      await postComments(dataKey, user, insight);
+      await display(allComms, dataKey);
     });
   }
 });
-
