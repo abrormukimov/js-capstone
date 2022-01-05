@@ -12,7 +12,6 @@ const section1 = document.querySelector('.section1');
 const commentSubmit = document.querySelector('.add-comment-form');
 const reserveSubmit = document.querySelector('.add-reservation');
 
-const allComms = document.querySelector('.all-comments');
 const allRes = document.querySelector('.allRes');
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -65,8 +64,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 });
 
+
 section1.addEventListener('click', async (e) => {
   if (e.target.id === 'comment') {
+    const allComms = document.querySelector('.all-comments');
     const dataKey = e.target.dataset.key;
     display(allComms, dataKey);
     const commentsMenu = document.querySelector('.comments-menu');
@@ -100,6 +101,7 @@ section1.addEventListener('click', async (e) => {
     });
   }
 });
+
 
 section1.addEventListener('click', async (e) => {
   if (e.target.id === 'reserve') {

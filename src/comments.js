@@ -5,9 +5,12 @@ const display = async (commentsSection, id) => {
   const data = await getComments(id);
   let listItems = '';
   data.forEach((item) => {
-    listItems += `<p>${item.username}: ${item.comment}</p>`;
+    listItems += `<p class="user-com">${item.username}: ${item.comment}</p>`;
   });
   commentsSection.innerHTML = listItems;
+  const myelement = document.createElement('h3')
+  myelement.textContent = `${commentsSection.childElementCount} Comments`;
+  commentsSection.insertBefore(myelement, commentsSection.firstChild)
 };
 
 const displayRes = async (reserveSection, id) => {
@@ -29,4 +32,4 @@ const displayLikes = async (like, id) => {
   });
 };
 
-export { display, displayRes, displayLikes };
+export { display, displayRes, displayLikes};
