@@ -61,7 +61,7 @@ const postLikes = async (itemId) => {
       item_id: itemId,
     }),
   });
-  return response.json();
+  return response.text();
 };
 
 const getLikes = async () => {

@@ -1,4 +1,5 @@
 import {
+  getLikes,
   getMovies,
   postComments,
   postLikes,
@@ -36,8 +37,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       const noOfLikes = document.createElement('p');
       noOfLikes.classList.add('no-of-likes');
-      const ll = displayLikes(noOfLikes, likeButton.dataset.key);
-      noOfLikes.textContent = ll;
+      noOfLikes.textContent = displayLikes(noOfLikes, likeButton.dataset.key);
+      if (noOfLikes.textContent === '[object Promise]') {
+        noOfLikes.textContent = '0 like';
+      }
 
       const commentButton = document.createElement('button');
       commentButton.type = 'button';
@@ -96,7 +99,6 @@ section1.addEventListener('click', async (e) => {
       await display(allComms, dataKey);
     });
   }
-  console.log(e.target.id);
 });
 
 section1.addEventListener('click', async (e) => {
@@ -138,11 +140,10 @@ section1.addEventListener('click', async (e) => {
   }
 });
 
-section1.addEventListener('click', async (e) => {
+section1.addEventListener('click', (e) => {
   if (e.target.dataset.indexNumber === '20') {
     const dataKey = e.target.dataset.key;
     const noOfLikes = e.target.nextSibling;
-    await displayLikes(noOfLikes, dataKey);
     getMovies().then((res) => {
       res.forEach((mov) => {
         const datakey = parseInt(e.target.dataset.key, 10);
