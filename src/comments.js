@@ -17,10 +17,17 @@ const displayRes = async (reserveSection, id) => {
   reserveSection.innerHTML = '';
   const dat = await getReservation(id);
   let listItems = '';
-  dat.forEach((item) => {
-    listItems += `<p>${item.username}: Startdate: ${item.date_start} - Enddate: ${item.date_end}</p>`;
-  });
-  reserveSection.innerHTML = listItems;
+  console.log(dat);
+  if(dat.length !== 0){
+    dat.forEach((item) => {
+      listItems += `<p>${item.username}: Startdate: ${item.date_start} - Enddate: ${item.date_end}</p>`;
+    });
+    reserveSection.innerHTML = listItems;
+  }
+  
+  const myelement = document.createElement('h3')
+  myelement.textContent = `${reserveSection.childElementCount} Reservation(s)`;
+  reserveSection.insertBefore(myelement, reserveSection.firstChild)
 };
 
 const displayLikes = async (like, id) => {

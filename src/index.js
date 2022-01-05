@@ -102,7 +102,6 @@ section1.addEventListener('click', async (e) => {
   }
 });
 
-
 section1.addEventListener('click', async (e) => {
   if (e.target.id === 'reserve') {
     const dataKey = e.target.dataset.key;
