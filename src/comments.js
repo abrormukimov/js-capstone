@@ -26,7 +26,7 @@ const displayRes = async (reserveSection, id) => {
 }
   
   const myelement = document.createElement('h3')
-  myelement.textContent = `${reserveSection.childElementCount} Reservation(s)`;
+  myelement.textContent = `${reserveSection.childElementCount}  Reservation(s)`;
   reserveSection.insertBefore(myelement, reserveSection.firstChild)
 };
 
