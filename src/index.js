@@ -1,5 +1,4 @@
 import {
-  getLikes,
   getMovies,
   postComments,
   postLikes,
