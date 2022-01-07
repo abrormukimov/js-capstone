@@ -6,7 +6,7 @@ const array = [{
   date_end: "2022-2-1"
 },
 {
-  username: "Finn",
+  username: "Finnn",
   date_start: "2022-1-1",
   date_end: "2022-2-1"
 
