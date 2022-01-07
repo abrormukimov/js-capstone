@@ -21,6 +21,7 @@ global.fetch = jest.fn(() => Promise.resolve({
     return array;
   },
 }));
+
 describe('Comments Count', () => {
   test('the number of comments', async () => {
     const result = await commentCounter('itemId');
