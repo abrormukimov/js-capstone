@@ -23,7 +23,7 @@ const displayRes = async (reserveSection, id) => {
       listItems += `<p>${item.username}: Startdate: ${item.date_start} - Enddate: ${item.date_end}</p>`;
     });
     reserveSection.innerHTML = listItems;
-  }
+}
   
   const myelement = document.createElement('h3')
   myelement.textContent = `${reserveSection.childElementCount} Reservation(s)`;
