@@ -73,5 +73,8 @@ export {
   getMovies,
   postComments,
   getComments,
-  getReservation, postReservations, getLikes, postLikes,
+  getReservation,
+  postReservations,
+  getLikes,
+  postLikes,
 };
