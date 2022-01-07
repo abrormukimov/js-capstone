@@ -70,5 +70,8 @@ const getLikes = async () => {
 };
 
 export {
-  getMovies, postComments, getComments, getReservation, postReservations, getLikes, postLikes,
+  getMovies,
+  postComments,
+  getComments,
+  getReservation, postReservations, getLikes, postLikes,
 };
