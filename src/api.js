@@ -75,6 +75,5 @@ export {
   getComments,
   getReservation,
   postReservations,
-  getLikes,
-  postLikes,
+  getLikes, postLikes,
 };
