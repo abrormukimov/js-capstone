@@ -5,7 +5,7 @@ const display = async (commentsSection, id) => {
   const data = await getComments(id);
   let listItems = '';
   data.forEach((item) => {
-    listItems += `<p class="user-com">${item.username}: ${item.comment}</p>`;
+    listItems += `<p class="user-com">${item.username}:  ${item.comment}</p>`;
   });
   commentsSection.innerHTML = listItems;
   const myelement = document.createElement('h3')
