@@ -136,25 +136,6 @@ section1.addEventListener("click", async (e) => {
     });
   }
 });
-function closeForm() {
-  const close = document.querySelector("#times");
-  const commentsMenu = document.querySelector(".comments-menu");
-  close.addEventListener("click", () => {
-    commentsMenu.style.display = "none";
-    location.reload();
-  });
-}
-closeForm();
-
-function closeRes() {
-  const closer = document.querySelector("#time");
-  const reservationMenu = document.querySelector(".reservation-menu");
-  closer.addEventListener("click", () => {
-    reservationMenu.style.display = "none";
-    // location.reload();
-  });
-}
-closeRes();
 
 section1.addEventListener("click", (e) => {
   if (e.target.dataset.indexNumber === "20") {
