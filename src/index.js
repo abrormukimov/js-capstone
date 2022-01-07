@@ -140,7 +140,7 @@ section1.addEventListener('click', async (e) => {
   }
 });
 
-function closeForm() {
+function closeForms() {
   const close = document.querySelector('#times')
 const commentsMenu = document.querySelector('.comments-menu');
 close.addEventListener('click',()=>{
@@ -148,7 +148,7 @@ close.addEventListener('click',()=>{
   location.reload();
 })
 }
-closeForm();
+closeForms();
 
 function closeRes() {
 const closer = document.querySelector('#time')
