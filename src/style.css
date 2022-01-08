@@ -60,6 +60,7 @@ button {
   bottom: 0;
   right: 0;
   left: 0;
+  font-size: 25px;
   color: white;
   display: flex;
   justify-content: center;
@@ -128,3 +129,4 @@ button {
   height: 2.25rem;
   border-radius: 0.3125rem;
 }
+
