@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Todo
+# Movies and Tv Shows
 
 > This is a web Api capstone project that allows users to add their scores.
 
