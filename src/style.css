@@ -83,7 +83,7 @@ button {
 
 .reserve-menu-poppedup {
   display: block;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.85);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -95,4 +95,39 @@ button {
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
+}
+
+.add-reservation{
+  display: flex;
+  flex-direction: column;
+  margin: .3125rem;
+}
+
+.usname{
+  width: 18.75rem;
+  margin-bottom: 5px;
+  height: 2.25rem;
+    border-radius: .3125rem;
+
+}
+
+.startDate {
+  width: 18.75rem;
+  margin-bottom: 5px;
+  height: 2.25rem;
+  border-radius: .3125rem;
+}
+
+.endDate{
+   width: 18.75rem;
+  margin-bottom: 5px;
+  height: 2.25rem;
+  border-radius: .3125rem;
+}
+
+.reserve-submit-btn{
+  width: 8.75rem;
+  margin-bottom: 5px;
+  height: 2.25rem;
+  border-radius: .3125rem;
 }
