@@ -63,14 +63,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 });
 
-
 section1.addEventListener('click', async (e) => {
   if (e.target.id === 'comment') {
     const allComms = document.querySelector('.all-comments');
     const dataKey = e.target.dataset.key;
     display(allComms, dataKey);
     const commentsMenu = document.querySelector('.comments-menu');
-      commentsMenu.style.display ='flex';
+    commentsMenu.style.display = 'flex';
     commentsMenu.classList.add('comments-menu-poppedup');
     const image = document.querySelector('.movie-img');
     const movieTitle = document.querySelector('.movie-title');
@@ -107,7 +106,7 @@ section1.addEventListener('click', async (e) => {
     const dataKey = e.target.dataset.key;
     await displayRes(allRes, dataKey);
     const reservationMenu = document.querySelector('.reservation-menu');
-    reservationMenu.style.display ='flex';
+    reservationMenu.style.display = 'flex';
     reservationMenu.classList.add('reserve-menu-poppedup');
     const image = document.querySelector('.movie-image');
     const movieTitle = document.querySelector('.movie-name');
@@ -134,8 +133,6 @@ section1.addEventListener('click', async (e) => {
       const user = document.querySelector('.usname').value;
       const start = document.querySelector('.startDate').value;
       const end = document.querySelector('.endDate').value;
-      console.log(start);
-      console.log(end);
       await postReservations(dataKey, user, start, end);
       await displayRes(allRes, dataKey);
     });
@@ -143,26 +140,22 @@ section1.addEventListener('click', async (e) => {
 });
 
 function closeForm() {
-  const close = document.querySelector('#times')
-const commentsMenu = document.querySelector('.comments-menu');
-close.addEventListener('click',()=>{
-  console.log(1234);
-  commentsMenu.style.display ='none';
-})
+  const close = document.querySelector('#times');
+  const commentsMenu = document.querySelector('.comments-menu');
+  close.addEventListener('click', () => {
+    commentsMenu.style.display = 'none';
+  });
 }
 closeForm();
 
 function closeRes() {
-const closer = document.querySelector('#time')
-const reservationMenu = document.querySelector('.reservation-menu');
-closer.addEventListener('click',()=>{
-
-  console.log(1234);
-  reservationMenu.style.display ='none';
-})
+  const closer = document.querySelector('#time');
+  const reservationMenu = document.querySelector('.reservation-menu');
+  closer.addEventListener('click', () => {
+    reservationMenu.style.display = 'none';
+  });
 }
 closeRes();
-
 
 section1.addEventListener('click', (e) => {
   if (e.target.dataset.indexNumber === '20') {

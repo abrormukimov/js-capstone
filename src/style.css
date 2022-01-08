@@ -54,7 +54,6 @@ button {
 }
 
 .comments-menu-poppedup {
-  display: block;
   background: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
@@ -82,7 +81,6 @@ button {
 }
 
 .reserve-menu-poppedup {
-  display: block;
   background: rgba(0, 0, 0, 0.85);
   position: fixed;
   top: 0;
@@ -97,37 +95,36 @@ button {
   overflow-y: scroll;
 }
 
-.add-reservation{
+.add-reservation {
   display: flex;
   flex-direction: column;
-  margin: .3125rem;
+  margin: 0.3125rem;
 }
 
-.usname{
+.usname {
   width: 18.75rem;
   margin-bottom: 5px;
   height: 2.25rem;
-    border-radius: .3125rem;
-
+  border-radius: 0.3125rem;
 }
 
 .startDate {
   width: 18.75rem;
   margin-bottom: 5px;
   height: 2.25rem;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
 }
 
-.endDate{
-   width: 18.75rem;
+.endDate {
+  width: 18.75rem;
   margin-bottom: 5px;
   height: 2.25rem;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
 }
 
-.reserve-submit-btn{
+.reserve-submit-btn {
   width: 8.75rem;
   margin-bottom: 5px;
   height: 2.25rem;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
 }

@@ -8,26 +8,25 @@ const display = async (commentsSection, id) => {
     listItems += `<p class="user-com">${item.username}: ${item.comment}</p>`;
   });
   commentsSection.innerHTML = listItems;
-  const myelement = document.createElement('h3')
+  const myelement = document.createElement('h3');
   myelement.textContent = `${commentsSection.childElementCount} Comments`;
-  commentsSection.insertBefore(myelement, commentsSection.firstChild)
+  commentsSection.insertBefore(myelement, commentsSection.firstChild);
 };
 
 const displayRes = async (reserveSection, id) => {
   reserveSection.innerHTML = '';
   const dat = await getReservation(id);
   let listItems = '';
-  console.log(dat);
-  if(dat.length !== 0){
+  if (dat.length !== 0) {
     dat.forEach((item) => {
       listItems += `<p>${item.username}: Startdate: ${item.date_start} - Enddate: ${item.date_end}</p>`;
     });
     reserveSection.innerHTML = listItems;
-}
-  
-  const myelement = document.createElement('h3')
+  }
+
+  const myelement = document.createElement('h3');
   myelement.textContent = `${reserveSection.childElementCount}  Reservation(s)`;
-  reserveSection.insertBefore(myelement, reserveSection.firstChild)
+  reserveSection.insertBefore(myelement, reserveSection.firstChild);
 };
 
 const displayLikes = async (like, id) => {
@@ -39,4 +38,4 @@ const displayLikes = async (like, id) => {
   });
 };
 
-export { display, displayRes, displayLikes};
+export { display, displayRes, displayLikes };
