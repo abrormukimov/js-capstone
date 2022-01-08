@@ -1,4 +1,4 @@
-import { getReservation } from './api.js';
+import { getReservation } from "./api.js";
 
 const reservationCounter = async (itemId) => {
   const arrayReservation = await getReservation(itemId);
@@ -12,7 +12,10 @@ class Counter {
     const arrShows = await getReservation();
     return this.countElements(arrShows);
   }
+
 }
 
 const counter = new Counter();
-export { counter, reservationCounter };
+export {counter, reservationCounter};
+
+

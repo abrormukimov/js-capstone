@@ -2,11 +2,11 @@
 
 # Todo
 
-> This is a web Api capstone project that allows users to add their scores.
+> This is a leaderboard project that allows users to add their scores.
 
 ## Live Demo 
 
-- [Click here](https://abrormukimov.github.io/js-capstone/dist/)
+- [Click here](https://abrormukimov.github.io/leaderboard/)
 
 ## Built With
 
@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple example steps.
 
     1. Press the green button "Code" and copy the link.
     2. Open terminal or Git Bash in a folder where you want to clone the repository.
-    3. Type the command `git@github.com:abrormukimov/js-capstone.git` and press "Enter"
+    3. Type the command `git@github.com:abrormukimov/leaderboard.git` and press "Enter"
     4. Navigate to the root directory of the project
     5. Run 'npm install' to install the dependencies
     6. Run 'npm run start' to launch the web server
@@ -34,22 +34,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@abrormukimov](https://twitter.com/abrormukimov)
 - LinkedIn: [Abror Mukimov](https://www.linkedin.com/in/abror-mukimov/
 )
-**Author**
 
-- GitHub: [@DelhinRharl](https://github.com/DelhinRharl)
-- Twitter: [@DelhinRharl](https://twitter.com/DelhinRharl)
-- LinkedIn: [Affaxed Kiprotich](https://www.linkedin.com/in/Affaxed-Kiprotich/
-)
-
-GitHub: [@direakanbi](https://github.com/direakanbi)
-- Twitter: [@direakanbi](https://twitter.com/direakanbi)
-- LinkedIn: [Dire Akanbi](https://www.linkedin.com/in/Dire-Akanbi/
-)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abrormukimov/js-capstone/issues).
+Feel free to check the [issues page](https://github.com/abrormukimov/leaderboard/issues).
 
 ## Show your support
 
