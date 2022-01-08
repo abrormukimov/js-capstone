@@ -1,4 +1,5 @@
-import { commentCounter } from './counter.js';
+import { commentCounter } from './commentCounter.js';
+
 const array = [{
   creation_date: '21-12-2021',
   username: 'Mikes',

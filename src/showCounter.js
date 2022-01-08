@@ -1,4 +1,4 @@
-import { getMovies } from "./api.js";
+import { getMovies } from './api.js';
 
 const showsCounter = async (itemId) => {
   const arrShows = await getMovies(itemId);
@@ -12,8 +12,7 @@ class Counter {
     const arrayOfShows = await getMovies();
     return this.countElements(arrayOfShows);
   }
-
 }
 
 const counter = new Counter();
-export {counter,showsCounter};
+export { counter, showsCounter };

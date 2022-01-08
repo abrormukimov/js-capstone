@@ -1,4 +1,4 @@
-import { getLikes, getComments} from "./api.js";
+import { getLikes, getComments } from './api.js';
 
 const commentCounter = async (itemId) => {
   const arrComments = await getComments(itemId);
@@ -15,5 +15,4 @@ class Counter {
 }
 
 const counter = new Counter();
-export {counter, commentCounter};
-
+export { counter, commentCounter };
